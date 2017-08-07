@@ -35,7 +35,7 @@ class ViewController: UIViewController, ARSCNViewDelegate
         let configuration = ARWorldTrackingSessionConfiguration()
         
         // Run the view's session
-        //sceneView.session.run(configuration)
+        sceneView.session.run(configuration)
     }
     
     override func viewWillDisappear(_ animated: Bool)

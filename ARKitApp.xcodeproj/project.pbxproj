@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE7D97E51F38E638001D2601 /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D97E41F38E638001D2601 /* SelectableButton.swift */; };
 		BEC233031F3856BD00F6BB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC233021F3856BD00F6BB9D /* AppDelegate.swift */; };
 		BEC233051F3856BD00F6BB9D /* models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC233041F3856BD00F6BB9D /* models.scnassets */; };
 		BEC233071F3856BD00F6BB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC233061F3856BD00F6BB9D /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE7D97E41F38E638001D2601 /* SelectableButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectableButton.swift; sourceTree = "<group>"; };
 		BEC232FF1F3856BC00F6BB9D /* ARKitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARKitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEC233021F3856BD00F6BB9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEC233041F3856BD00F6BB9D /* models.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = models.scnassets; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				BEC233061F3856BD00F6BB9D /* ViewController.swift */,
 				BEC233081F3856BD00F6BB9D /* Main.storyboard */,
 				BEC2330D1F3856BD00F6BB9D /* LaunchScreen.storyboard */,
+				BE7D97E41F38E638001D2601 /* SelectableButton.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				BEC233031F3856BD00F6BB9D /* AppDelegate.swift in Sources */,
 				BEC233221F385EA700F6BB9D /* SCNMathHelper.swift in Sources */,
 				BEC233271F38600200F6BB9D /* SCNARViewHelper.swift in Sources */,
+				BE7D97E51F38E638001D2601 /* SelectableButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

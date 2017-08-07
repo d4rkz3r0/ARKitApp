@@ -5,23 +5,126 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13147.4"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Futura.ttc">
+            <string>Futura-Bold</string>
+            <string>Futura-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="ARKitApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                    <view key="view" contentMode="scaleToFill" id="Cbh-xP-kEr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIw-vd-XQ7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gA0-HA-RCy">
+                                <rect key="frame" x="112" y="611" width="150" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-Xk-9Ix" userLabel="Add Object" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <state key="normal" title="➕"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDK-yu-CXI" userLabel="Measure Distance" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
+                                        <rect key="frame" x="60" y="0.0" width="30" height="36"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <state key="normal" title="📏"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwD-2F-EkA" userLabel="Refresh Session" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
+                                        <rect key="frame" x="120" y="0.0" width="30" height="36"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <state key="normal" title="♻️"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="akU-og-wpa" userLabel="Reticle">
+                                <rect key="frame" x="177" y="323.5" width="10" height="10"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="10" id="55T-aY-otu"/>
+                                    <constraint firstAttribute="width" constant="10" id="TnH-ik-6UA"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xuk-js-l2c">
+                                <rect key="frame" x="8" y="20" width="359" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tracking State Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMX-tX-pko">
+                                <rect key="frame" x="8" y="57.5" width="359" height="23.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: 6.0 meters." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-di-bg4">
+                                <rect key="frame" x="106" y="568.5" width="163" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hd6-Sn-hgr" firstAttribute="bottom" secondItem="cIw-vd-XQ7" secondAttribute="bottom" id="59h-V5-Onz"/>
+                            <constraint firstItem="PMX-tX-pko" firstAttribute="centerX" secondItem="Cbh-xP-kEr" secondAttribute="centerX" id="5XD-fe-Nhc"/>
+                            <constraint firstItem="PMX-tX-pko" firstAttribute="leading" secondItem="hd6-Sn-hgr" secondAttribute="leading" constant="8" id="6ml-p7-je8"/>
+                            <constraint firstItem="Mad-di-bg4" firstAttribute="centerX" secondItem="Cbh-xP-kEr" secondAttribute="centerX" id="6oK-WG-wVD"/>
+                            <constraint firstItem="xuk-js-l2c" firstAttribute="leading" secondItem="hd6-Sn-hgr" secondAttribute="leading" constant="8" id="7b4-zM-Wf5"/>
+                            <constraint firstItem="cIw-vd-XQ7" firstAttribute="leading" secondItem="hd6-Sn-hgr" secondAttribute="leading" id="97O-Q9-kVb"/>
+                            <constraint firstItem="cIw-vd-XQ7" firstAttribute="top" secondItem="hd6-Sn-hgr" secondAttribute="top" constant="-20" id="EAa-ee-EB6"/>
+                            <constraint firstItem="xuk-js-l2c" firstAttribute="centerX" secondItem="Cbh-xP-kEr" secondAttribute="centerX" id="HeI-ZE-LWg"/>
+                            <constraint firstItem="gA0-HA-RCy" firstAttribute="top" secondItem="Mad-di-bg4" secondAttribute="bottom" constant="20" id="Rnj-x7-19C"/>
+                            <constraint firstItem="akU-og-wpa" firstAttribute="centerY" secondItem="Cbh-xP-kEr" secondAttribute="centerY" constant="-5" id="Zdr-vt-5ch"/>
+                            <constraint firstItem="hd6-Sn-hgr" firstAttribute="trailing" secondItem="cIw-vd-XQ7" secondAttribute="trailing" id="apA-xC-mHX"/>
+                            <constraint firstItem="gA0-HA-RCy" firstAttribute="centerX" secondItem="Cbh-xP-kEr" secondAttribute="centerX" id="fSI-gG-SXs"/>
+                            <constraint firstItem="akU-og-wpa" firstAttribute="centerX" secondItem="Cbh-xP-kEr" secondAttribute="centerX" constant="-5.5" id="fgK-zb-fVt"/>
+                            <constraint firstItem="PMX-tX-pko" firstAttribute="top" secondItem="xuk-js-l2c" secondAttribute="bottom" constant="14" id="rms-IV-x3z"/>
+                            <constraint firstItem="xuk-js-l2c" firstAttribute="top" secondItem="hd6-Sn-hgr" secondAttribute="top" id="tJO-af-Noh"/>
+                            <constraint firstItem="hd6-Sn-hgr" firstAttribute="bottom" secondItem="gA0-HA-RCy" secondAttribute="bottom" constant="20" id="u1R-5p-IIi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hd6-Sn-hgr"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="sceneView" destination="cIw-vd-XQ7" id="ucG-eL-czS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
         </scene>
     </scenes>
 </document>
