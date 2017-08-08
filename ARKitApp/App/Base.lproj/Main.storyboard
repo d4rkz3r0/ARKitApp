@@ -26,41 +26,64 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIw-vd-XQ7">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arscnView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gA0-HA-RCy">
-                                <rect key="frame" x="112" y="611" width="150" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="gA0-HA-RCy">
+                                <rect key="frame" x="67" y="609" width="240" height="38"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-Xk-9Ix" userLabel="Add Object" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="30" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mf9-Xk-9Ix" userLabel="Add Candle" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="30" height="38"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <state key="normal" title="➕"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addObjectButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="Dmx-Vc-6ce"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLI-2u-HIC" userLabel="Add Chair" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="0.0" width="30" height="38"/>
+                                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                        <state key="normal" title="➕"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="2"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="addChairButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="sqP-Xi-jdB"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDK-yu-CXI" userLabel="Measure Distance" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
-                                        <rect key="frame" x="60" y="0.0" width="30" height="36"/>
+                                        <rect key="frame" x="140" y="0.0" width="30" height="38"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <state key="normal" title="📏"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="measuringToolButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="2By-o6-Ryd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qwD-2F-EkA" userLabel="Refresh Session" customClass="SelectableButton" customModule="ARKitApp" customModuleProvider="target">
-                                        <rect key="frame" x="120" y="0.0" width="30" height="36"/>
+                                        <rect key="frame" x="210" y="0.0" width="30" height="38"/>
                                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
                                         <state key="normal" title="♻️"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                                 <integer key="value" value="2"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="refreshSessionButtonPressed:" destination="BV1-FR-VrT" eventType="touchUpInside" id="jjF-oa-wHC"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -91,7 +114,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance: 6.0 meters." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mad-di-bg4">
-                                <rect key="frame" x="106" y="568.5" width="163" height="22.5"/>
+                                <rect key="frame" x="106" y="566.5" width="163" height="22.5"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -119,7 +142,15 @@
                         <viewLayoutGuide key="safeArea" id="hd6-Sn-hgr"/>
                     </view>
                     <connections>
+                        <outlet property="addChairButton" destination="yLI-2u-HIC" id="bG8-mf-gC7"/>
+                        <outlet property="addObjectButton" destination="mf9-Xk-9Ix" id="4US-zN-oGj"/>
+                        <outlet property="distanceLabel" destination="Mad-di-bg4" id="dI1-ic-tr2"/>
+                        <outlet property="measureToolButton" destination="wDK-yu-CXI" id="YDe-Bd-RD6"/>
+                        <outlet property="messageLabel" destination="xuk-js-l2c" id="pza-mb-ybE"/>
+                        <outlet property="resetSessionButton" destination="qwD-2F-EkA" id="61P-Vf-phR"/>
+                        <outlet property="reticleView" destination="akU-og-wpa" id="ElF-Th-k7U"/>
                         <outlet property="sceneView" destination="cIw-vd-XQ7" id="ucG-eL-czS"/>
+                        <outlet property="trackingStateLabel" destination="PMX-tX-pko" id="84h-qm-PVn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>

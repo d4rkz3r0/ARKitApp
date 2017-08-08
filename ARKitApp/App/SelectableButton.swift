@@ -16,7 +16,7 @@ class SelectableButton: UIButton
             {
                 if isSelected
                 {
-                    layer.borderColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1);
+                    layer.borderColor = UIColor.green.cgColor;
                     layer.borderWidth = 3.0;
                 }
                 else

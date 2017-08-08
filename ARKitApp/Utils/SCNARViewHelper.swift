@@ -6,4 +6,9 @@
 //  Copyright © 2017 d4rkz3r0. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIViewController
+{
+    
+}
