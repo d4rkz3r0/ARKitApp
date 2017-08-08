@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BE7D97E51F38E638001D2601 /* SelectableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7D97E41F38E638001D2601 /* SelectableButton.swift */; };
+		BEBCB8CF1F3A6631002BB336 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC233181F38573200F6BB9D /* Assets.xcassets */; };
 		BEC233031F3856BD00F6BB9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC233021F3856BD00F6BB9D /* AppDelegate.swift */; };
 		BEC233051F3856BD00F6BB9D /* models.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = BEC233041F3856BD00F6BB9D /* models.scnassets */; };
 		BEC233071F3856BD00F6BB9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC233061F3856BD00F6BB9D /* ViewController.swift */; };
@@ -165,6 +166,7 @@
 			files = (
 				BEC233051F3856BD00F6BB9D /* models.scnassets in Resources */,
 				BEC2330F1F3856BD00F6BB9D /* LaunchScreen.storyboard in Resources */,
+				BEBCB8CF1F3A6631002BB336 /* Assets.xcassets in Resources */,
 				BEC2330A1F3856BD00F6BB9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
