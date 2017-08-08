@@ -300,7 +300,7 @@ extension ViewController
     }
     private func deselectAllButtons()
     {
-        [addObjectButton, measureToolButton, resetSessionButton].forEach
+        [addObjectButton, addChairButton, measureToolButton, resetSessionButton].forEach
             {
                 $0?.isSelected = false;
             }
