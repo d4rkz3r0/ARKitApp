@@ -106,7 +106,6 @@ extension ViewController
                         self.objects.append(sphereNode);
                         node.addChildNode(sphereNode);
                         self.measuringNodes.append(node);
-                        break;
                     case .none:
                         break;
                     }
@@ -166,7 +165,7 @@ extension ViewController
     {
         sceneView.delegate = self;
         
-        let sessionConfiguration = ARWorldTrackingSessionConfiguration();
+        let sessionConfiguration = ARWorldTrackingConfiguration();
         sessionConfiguration.planeDetection = .horizontal;
         sessionConfiguration.isLightEstimationEnabled = true;
         
@@ -203,8 +202,6 @@ extension ViewController
                 trackingStateLabel.text = "Limited Tracking: Insufficient Lighting";
             case .initializing:
                 trackingStateLabel.text = "Initializing...";
-            case .none:
-                trackingStateLabel.text = "";
             }
         }
     }
@@ -234,32 +231,38 @@ extension ViewController
     {
         guard measuringNodes.count > 1 else { return; }
         
-        let firstNode = measuringNodes[0];
-        let secondNode = measuringNodes[1];
-        
-        let showMeasuring = self.measuringNodes.count == 2;
-        distanceLabel.isHidden = !showMeasuring;
-        
-        //Update meters and show on UI
-        if showMeasuring
+        switch currentFunctionState
         {
-            measure(fromNode: firstNode, toNode: secondNode);
-        }
+        case .measuring:
+            let firstNode = measuringNodes[0];
+            let secondNode = measuringNodes[1];
             
             //Remove old measurement nodes and the measuring line node.
-        else if measuringNodes.count > 2
-        {
-            firstNode.removeFromParentNode();
-            secondNode.removeFromParentNode();
-            measuringNodes.removeFirst(2);
-            
-            for node in sceneView.scene.rootNode.childNodes
+            if measuringNodes.count > 2
             {
-                if node.name == "Measuring Line"
+                firstNode.removeFromParentNode();
+                secondNode.removeFromParentNode();
+                measuringNodes.removeFirst(2);
+                
+                for node in sceneView.scene.rootNode.childNodes
                 {
-                    node.removeFromParentNode();
+                    if node.name == "Measuring Line"
+                    {
+                        node.removeFromParentNode();
+                    }
                 }
             }
+            
+            let showMeasuring = self.measuringNodes.count == 2;
+            distanceLabel.isHidden = !showMeasuring;
+            
+            //Update meters and show on UI
+            if showMeasuring
+            {
+                measure(fromNode: firstNode, toNode: secondNode);
+            }
+        default:
+            return;
         }
     }
 }
@@ -289,6 +292,7 @@ extension ViewController
     @IBAction func refreshSessionButtonPressed(_ sender: Any)
     {
         removeAllObjects();
+        currentFunctionState = .none;
         distanceLabel.text = "";
         //startARSession(resetSession: true);
     }
